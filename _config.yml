@@ -1,0 +1,43 @@
+# --- Configuración del Sitio ---
+title: La leyenda de las esferas
+email: tu-email@dominio.com
+description: >- # Escribe aquí tu meta descripción principal
+  Bienvenido a la saga de 'La Leyenda de las Esferas', una historia 
+  de aventuras y fantasía donde la magia y la tecnología colisionarán, 
+  en un mundo lleno de misterios donde nada será lo que parece.
+baseurl: "" # No cambiar si el sitio está en la raíz (como sagaesferas.com)
+url: "https://www.sagaesferas.com" # Tu dominio final
+twitter_username: tu_usuario_twitter
+github_username:  tu_usuario_github
+
+# --- Configuración del Tema ---
+# Usaremos el tema por defecto de GitHub Pages, "Minima". 
+# Es limpio, adaptable a móviles y perfecto para blogs.
+# Puedes cambiarlo más tarde por otros temas minimalistas.
+theme: minima
+
+# --- Configuración de Plugins ---
+# Aquí está la magia del SEO que soluciona el problema de Google Sites
+plugins:
+  - jekyll-seo-tag  # Añade meta descripciones, Open Graph, etc. [6]
+  - jekyll-sitemap # Genera un sitemap.xml para Google [5]
+
+# --- Configuración de la Navegación ---
+# Define las páginas que aparecerán en el menú principal
+header_pages:
+  - inicio.md
+  - autor.md
+  - mundo.md
+  - personajes.md
+  - blog.md
+  - contacto.md
+
+# --- Opcional: Configuración por defecto para posts ---
+defaults:
+  -
+    scope:
+      path: "_posts"
+      type: "posts"
+    values:
+      layout: "post"
+      author: "Tu Nombre de Autor"

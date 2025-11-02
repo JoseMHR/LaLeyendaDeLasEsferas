@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    {% seo %} 
+    
+    <link rel="stylesheet" href="{{ "/assets/main.css" | relative_url }}">
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="wrapper">
+        <a class="site-title" rel="author" href="{{ "/" | relative_url }}">
+          {{ site.title | escape }}
+        </a>
+        <nav class="site-nav">
+          <div class="trigger">
+            {% for page in site.header_pages %}
+              <a class="page-link" href="{{ page | relative_url }}">
+                {{ page | split: '.' | first | capitalize }}
+              </a>
+            {% endfor %}
+          </div>
+        </nav>
+      </div>
+    </header>
+    <main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        {{ content }}
+      </div>
+    </main>
+    <footer class="site-footer h-card">
+      <data class="u-url" href="{{ "/" | relative_url }}"></data>
+      <div class="wrapper">
+        <div class="footer-col-wrapper">
+          <div class="footer-col">
+            <p class="feed-subscribe">
+              <a href="{{ 'feed.xml' | relative_url }}">
+                <span>Suscribirse vía RSS</span>
+              </a>
+            </p>
+          </div>
+          <div class="footer-col">
+            <p>{{ site.description | escape }}</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
